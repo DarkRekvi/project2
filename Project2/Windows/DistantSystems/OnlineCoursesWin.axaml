@@ -1,0 +1,39 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Project2.Windows.OnlineCoursesWin"
+        GotFocus="InputElement_OnGotFocus"
+        Title="Students">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" Margin="0 30 0 30" HorizontalAlignment="Center"> 
+                <TextBlock VerticalAlignment="Center">Введите название курса для поиска</TextBlock>
+                <TextBox Name="txtSearch" Width="200" Margin="5 0 5 0" TextChanged="TxtSearch_OnTextChanged"></TextBox>
+            </StackPanel>
+            
+            <StackPanel>
+                <DataGrid Name="OnlineCoursesGrid" x:CompileBindings="False" Height="300" Background="Brown" RowBackground="Crimson">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID курса" Binding="{Binding OnlineLibrary_ID}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Название курса" Binding="{Binding OnlineLibrary_Name}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Описание" Binding="{Binding OnlineLibrary_Descryption}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Ссылка на ресурс" Binding="{Binding OnlineLibrary_Link}"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+            
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 30 0 50">
+                <Button Click="Button_OnClick_AddStudentWin" HorizontalAlignment="Center" Margin="0 0 0 10">Добавить</Button>
+                
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0 0 0 10">
+                    <TextBlock VerticalAlignment="Center" Margin="0 0 10 0">Курс с ID:</TextBlock>
+                    <TextBox VerticalAlignment="Center" Name="StudentIDTextBox" Margin="0 0 10 0"></TextBox>
+                    <Button VerticalAlignment="Center" Click="Button_OnClick_DeleteStudent" HorizontalAlignment="Center" >Удалить</Button>
+                </StackPanel>
+                <Button Click="Button_OnClick_PrevWin" HorizontalAlignment="Center">Вернуться в меню</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

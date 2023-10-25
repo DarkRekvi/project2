@@ -1,0 +1,26 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Project2.Windows.StudentAddWin"
+        Title="StudentAddWin">
+    <Grid>
+        <StackPanel Orientation="Vertical" Width="750" Background="DarkGreen">
+            
+            <TextBlock VerticalAlignment="Center" Background="ForestGreen" Margin="0 10 0 0">Введите ID</TextBlock>
+            <TextBox Name="IDTextBox" Background="DarkGray" Margin="0 0 0 10"></TextBox>
+            
+            <TextBlock VerticalAlignment="Center" Background="ForestGreen">Введите имя студента</TextBlock>
+            <TextBox Name="NameTextBox" Background="DarkGray" Margin="0 0 0 10"></TextBox>
+            
+            <TextBlock VerticalAlignment="Center" Background="ForestGreen">Введите фамилию студента</TextBlock>
+            <TextBox Name="SecondNameTextBox" Background="DarkGray" Margin="0 0 0 10"></TextBox>
+            
+            <TextBlock VerticalAlignment="Center" Background="ForestGreen">Введите отчество студента</TextBlock>
+            <TextBox Name="ThirdNameTextBox" Background="DarkGray" Margin="0 0 0 10"></TextBox>
+            
+            <Button Click="AddButton" HorizontalAlignment="Center">Сохранить и добавить</Button>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -14,10 +14,7 @@ namespace Project2.Windows;
 
 public partial class OnlineLibrariesWin : Window
 {
-    private string _constring = "SERVER=localhost;" +
-                                "DATABASE=Project2;" +
-                                "UID=root;" +
-                                "PASSWORD=admin1;";
+    private string _constring = "SERVER=sql12.freesqldatabase.com;DATABASE=sql12659906;UID=sql12659906;PASSWORD=fkfP8wwq9S;";
     private List<OnlineLibrariesClass> _libraries;
     private MySqlConnection _connection;
     private string fulltable = "SELECT * FROM OnlineLibraries";
@@ -40,7 +37,7 @@ public partial class OnlineLibrariesWin : Window
             var current = new OnlineLibrariesClass()
             {
                 OnlineLibrary_ID = reader.GetInt32("ID"),
-                OnlineLibrary_Name = reader.GetString("Name"),
+                OnlineLibrary_Name = reader.GetString("LibraryName"),
                 OnlineLibrary_Descryption = reader.GetString("Descryption"),
                 OnlineLibrary_Link = reader.GetString("Link")
             };
@@ -82,11 +79,5 @@ public partial class OnlineLibrariesWin : Window
         ShowTable(fulltable);
     }
     
-    private void TxtSearch_OnTextChanged(object? sender, TextChangedEventArgs e)
-    {
-        string searchSql = "SELECT * FROM OnlineLibraries " +
-                           "WHERE Name LIKE '%" +
-                           txtSearch.Text + "%';";
-        ShowTable(searchSql);
-    }
+
 }

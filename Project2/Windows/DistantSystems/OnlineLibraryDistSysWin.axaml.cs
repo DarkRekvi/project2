@@ -14,10 +14,7 @@ namespace Project2.Windows;
 
 public partial class OnlineLibraryDistSysWin : Window
 {
-    private string _constring = "SERVER=localhost;" +
-                                "DATABASE=Project2;" +
-                                "UID=root;" +
-                                "PASSWORD=admin1;";
+    private string _constring = "SERVER=sql12.freesqldatabase.com;DATABASE=sql12659906;UID=sql12659906;PASSWORD=fkfP8wwq9S;";
     private List<OnlineLibraryDistSysClass> _onlinelibrarydistsystems;
     private MySqlConnection _connection;
     private string fulltable = "SELECT OnlineLibraryDistSys.ID, OnlineLibraryDistSys.OnlineLibrary, OnlineLibraries.LibraryName, OnlineLibraryDistSys.DistantSystem, DistantSystems.SystemName FROM OnlineLibraryDistSys " +

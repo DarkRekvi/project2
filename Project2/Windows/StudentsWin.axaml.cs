@@ -14,10 +14,7 @@ namespace Project2.Windows;
 
 public partial class StudentsWin : Window
 {
-    private string _constring = "SERVER=localhost;" +
-                                "DATABASE=Project2;" +
-                                "UID=root;" +
-                                "PASSWORD=admin1;";
+    private string _constring = "SERVER=sql12.freesqldatabase.com;DATABASE=sql12659906;UID=sql12659906;PASSWORD=fkfP8wwq9S;";
     private List<StudentClass> _students;
     private MySqlConnection _connection;
     private string fulltable = "SELECT * FROM Students";
@@ -64,12 +61,12 @@ public partial class StudentsWin : Window
         win.Show();
     }
 
-    private void Button_OnClick_DeleteStudent(object? sender, RoutedEventArgs e)
+    private void Button_OnClick_Delete(object? sender, RoutedEventArgs e)
     {
         using (var conn = new MySqlConnection(_constring))
         {
             conn.Open();
-            using (var cmd = new MySqlCommand("DELETE FROM Students WHERE ID LIKE " + StudentIDTextBox.Text, conn))
+            using (var cmd = new MySqlCommand("DELETE FROM Students WHERE ID LIKE " + IDTextBox.Text, conn))
             {
                 cmd.ExecuteNonQuery();
                 ShowTable(fulltable);

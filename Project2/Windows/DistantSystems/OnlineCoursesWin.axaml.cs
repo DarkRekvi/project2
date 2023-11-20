@@ -14,10 +14,7 @@ namespace Project2.Windows;
 
 public partial class OnlineCoursesWin : Window
 {
-    private string _constring = "SERVER=localhost;" +
-                                "DATABASE=Project2;" +
-                                "UID=root;" +
-                                "PASSWORD=admin1;";
+    private string _constring = "SERVER=sql12.freesqldatabase.com;DATABASE=sql12659906;UID=sql12659906;PASSWORD=fkfP8wwq9S;";
     private List<OnlineCoursesClass> _courses;
     private MySqlConnection _connection;
     private string fulltable = "SELECT * FROM OnlineCourses";
@@ -40,7 +37,7 @@ public partial class OnlineCoursesWin : Window
             var current = new OnlineCoursesClass()
             {
                 OnlineCourse_ID = reader.GetInt32("ID"),
-                OnlineCourse_Name = reader.GetString("Name"),
+                OnlineCourse_Name = reader.GetString("CourseName"),
                 OnlineCourse_Descryption = reader.GetString("Descryption"),
                 OnlineCourse_Link = reader.GetString("Link")
             };
@@ -82,11 +79,5 @@ public partial class OnlineCoursesWin : Window
         ShowTable(fulltable);
     }
     
-    private void TxtSearch_OnTextChanged(object? sender, TextChangedEventArgs e)
-    {
-        string searchSql = "SELECT * FROM OnlineCourses " +
-                           "WHERE Name LIKE '%" +
-                           txtSearch.Text + "%';";
-        ShowTable(searchSql);
-    }
+
 }

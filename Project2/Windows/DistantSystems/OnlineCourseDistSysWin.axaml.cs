@@ -14,10 +14,7 @@ namespace Project2.Windows;
 
 public partial class OnlineCourseDistSysWin : Window
 {
-    private string _constring = "SERVER=localhost;" +
-                                "DATABASE=Project2;" +
-                                "UID=root;" +
-                                "PASSWORD=admin1;";
+    private string _constring = "SERVER=sql12.freesqldatabase.com;DATABASE=sql12659906;UID=sql12659906;PASSWORD=fkfP8wwq9S;";
     private List<OnlineCourseDistSysClass> _onlinecourcedistsystems;
     private MySqlConnection _connection;
     private string fulltable = "SELECT OnlineCourseDistSys.ID, OnlineCourseDistSys.OnlineCourse, OnlineCourses.CourseName, OnlineCourseDistSys.DistantSystem, DistantSystems.SystemName FROM OnlineCourseDistSys " +

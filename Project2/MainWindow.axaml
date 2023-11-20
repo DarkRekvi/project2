@@ -8,20 +8,20 @@
     <Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Brown">
             <TextBlock FontSize="25" Margin="0 20 0 20" >Образование.ru</TextBlock>
-            <StackPanel Orientation="Vertical">
-                <Button Click="Button_OnClick_StudentsWin" HorizontalAlignment="Center" Margin="0 10 0 0">Студенты</Button>
-                <Button Click="Button_OnClick_StudentGroupsWin" HorizontalAlignment="Center" Margin="0 10 0 0">Группы</Button>
-                <Button Click="Button_OnClick_GradesWin" HorizontalAlignment="Center" Margin="0 10 0 0">Оценки</Button>
-                <Button Click="Button_OnClick_ScheduleWin" HorizontalAlignment="Center" Margin="0 10 0 0">Расписание</Button>
-                <Button Click="Button_OnClick_SubjectWin" HorizontalAlignment="Center" Margin="0 10 0 0">Предметы</Button>
+            <StackPanel Width="200" Orientation="Vertical">
+                <Button Width="200" Click="Button_OnClick_StudentsWin" HorizontalAlignment="Center" Margin="0 10 0 0">Студенты</Button>
+                <Button Width="200" Click="Button_OnClick_StudentGroupsWin" HorizontalAlignment="Center" Margin="0 10 0 0">Группы</Button>
+                <Button Width="200" Click="Button_OnClick_GradesWin" HorizontalAlignment="Center" Margin="0 10 0 0">Оценки</Button>
+                <Button Width="200" Click="Button_OnClick_ScheduleWin" HorizontalAlignment="Center" Margin="0 10 0 0">Расписание</Button>
+                <Button Width="200" Click="Button_OnClick_SubjectWin" HorizontalAlignment="Center" Margin="0 10 0 0">Предметы</Button>
             </StackPanel>
             
-            <StackPanel Orientation="Vertical">
-                <Button Click="Button_OnClick_LibrariesWin" HorizontalAlignment="Center" Margin="0 10 0 0">ОнлайнБиблиотеки</Button>
-                <Button Click="Button_OnClick_CoursesWin" HorizontalAlignment="Center" Margin="0 10 0 0">ОнлайнКурсы</Button>
-                <Button Click="Button_OnClick_DistantSystemsWin" HorizontalAlignment="Center" Margin="0 10 0 0">СистемыДистОбучения</Button>
-                <Button Click="Button_OnClick_OnlineLibraryDistSysWin" HorizontalAlignment="Center" Margin="0 10 0 0">Библиотеки в системах</Button>
-                <Button Click="Button_OnClick_OnlineCourseDistSysWin" HorizontalAlignment="Center" Margin="0 10 0 0">Курсы в системах</Button>
+            <StackPanel Width="200" Orientation="Vertical">
+                <Button Width="200" Click="Button_OnClick_LibrariesWin" HorizontalAlignment="Center" Margin="0 10 0 0">ОнлайнБиблиотеки</Button>
+                <Button Width="200" Click="Button_OnClick_CoursesWin" HorizontalAlignment="Center" Margin="0 10 0 0">ОнлайнКурсы</Button>
+                <Button Width="200" Click="Button_OnClick_DistantSystemsWin" HorizontalAlignment="Center" Margin="0 10 0 0">СистемыДистОбучения</Button>
+                <Button Width="200" Click="Button_OnClick_OnlineLibraryDistSysWin" HorizontalAlignment="Center" Margin="0 10 0 0">Библиотеки в системах</Button>
+                <Button Width="200" Click="Button_OnClick_OnlineCourseDistSysWin" HorizontalAlignment="Center" Margin="0 10 0 0">Курсы в системах</Button>
             </StackPanel>
         </StackPanel>
     </Grid>

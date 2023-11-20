@@ -5,5 +5,29 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Project2.Windows.ScheduleWin"
         Title="Schedule">
-    Welcome to Avalonia!
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel>
+                <DataGrid Name="DGrid" x:CompileBindings="False" Height="300" Background="Brown" RowBackground="Crimson">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding Schedule_ID}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Группа" Binding="{Binding Schedule_StudentGroup}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Название предмета" Binding="{Binding Schedule_Subject}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Дата" Binding="{Binding Schedule_Date}"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+            
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 30 0 50">
+                <Button Click="Button_OnClick_AddWin" HorizontalAlignment="Center" Margin="0 0 0 10">Добавить</Button>
+                
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0 0 0 10">
+                    <TextBlock VerticalAlignment="Center" Margin="0 0 10 0">Расписание с ID:</TextBlock>
+                    <TextBox VerticalAlignment="Center" Name="IDTextBox" Margin="0 0 10 0"></TextBox>
+                    <Button VerticalAlignment="Center" Click="Button_OnClick_Delete" HorizontalAlignment="Center" >Удалить</Button>
+                </StackPanel>
+                <Button Click="Button_OnClick_PrevWin" HorizontalAlignment="Center">Вернуться в меню</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
 </Window>

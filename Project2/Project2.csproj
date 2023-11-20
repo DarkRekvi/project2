@@ -25,5 +25,13 @@
         <DependentUpon>StudentAddWin.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
+      <Compile Update="AddingWindows\GradeAddWin.axaml.cs">
+        <DependentUpon>GradeAddWin.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="AddingWindows\ScheduleAddWin.axaml.cs">
+        <DependentUpon>ScheduleAddWin.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
     </ItemGroup>
 </Project>

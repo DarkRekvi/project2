@@ -8,10 +8,7 @@
         Title="Students">
     <Grid>
         <StackPanel Orientation="Vertical">
-            <StackPanel Orientation="Horizontal" Margin="0 30 0 30" HorizontalAlignment="Center"> 
-                <TextBlock VerticalAlignment="Center">Введите название системы для поиска</TextBlock>
-                <TextBox Name="txtSearch" Width="200" Margin="5 0 5 0" TextChanged="TxtSearch_OnTextChanged"></TextBox>
-            </StackPanel>
+
             
             <StackPanel>
                 <DataGrid Name="DistantSystemsGrid" x:CompileBindings="False" Height="300" Background="Brown" RowBackground="Crimson">

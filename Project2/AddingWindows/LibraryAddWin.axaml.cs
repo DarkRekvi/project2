@@ -8,10 +8,7 @@ namespace Project2.Windows;
 
 public partial class LibraryAddWin : Window
 {
-    private string _constring = "SERVER=localhost;" +
-                                "DATABASE=project2;" +
-                                "UID=root;" +
-                                "PASSWORD=admin1;";
+    private string _constring = "SERVER=sql12.freesqldatabase.com;DATABASE=sql12659906;UID=sql12659906;PASSWORD=fkfP8wwq9S;";
     private MySqlConnection _connection;
     public LibraryAddWin()
     {

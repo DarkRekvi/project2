@@ -14,10 +14,7 @@ namespace Project2.Windows;
 
 public partial class DistantSystemsWin : Window
 {
-    private string _constring = "SERVER=localhost;" +
-                                "DATABASE=Project2;" +
-                                "UID=root;" +
-                                "PASSWORD=admin1;";
+    private string _constring = "SERVER=sql12.freesqldatabase.com;DATABASE=sql12659906;UID=sql12659906;PASSWORD=fkfP8wwq9S;";
     private List<DistantSystemsClass> _distantsystems;
     private MySqlConnection _connection;
     private string fulltable = "SELECT * FROM DistantSystems";
@@ -40,7 +37,7 @@ public partial class DistantSystemsWin : Window
             var current = new DistantSystemsClass()
             {
                 DistantSystem_ID = reader.GetInt32("ID"),
-                DistantSystem_Name = reader.GetString("Name"),
+                DistantSystem_Name = reader.GetString("SystemName"),
                 DistantSystem_Descryption = reader.GetString("Descryption"),
                 DistantSystem_Link = reader.GetString("Link")
             };
@@ -82,11 +79,4 @@ public partial class DistantSystemsWin : Window
         ShowTable(fulltable);
     }
     
-    private void TxtSearch_OnTextChanged(object? sender, TextChangedEventArgs e)
-    {
-        string searchSql = "SELECT * FROM DistantSystems " +
-                           "WHERE Name LIKE '%" +
-                           txtSearch.Text + "%';";
-        ShowTable(searchSql);
-    }
 }
